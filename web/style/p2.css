@@ -1,0 +1,10 @@
+.table_div_p2{width: 600px;margin: 0 auto;}
+.table_div_p2> p{font-size: 16px; font-weight: bold;}
+.table_2 td[class=empty]{background-color: #fff;}
+.table_2 td[class=class_kind]{background-color: #ddd;font-weight: bold;}
+.table_2 td[class=special]{background-color: #ffd74b;}
+.condition_list{
+  font-size: 14px;
+  margin-left: 40px;
+  list-style: cjk-ideographic;
+}

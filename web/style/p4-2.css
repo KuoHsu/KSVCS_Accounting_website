@@ -1,0 +1,80 @@
+table{
+  border-spacing: 4px;
+  text-align: center;
+  margin:.5em auto 1em auto;
+}
+table td{
+  padding: 2px 10px;
+}
+p[class=p_2]{
+  font-size: 16px;
+  text-indent: 0;
+}
+li[class=list_li_1]{
+  overflow: hidden;
+}
+.competition_title{
+  z-index: 2;
+  background-color: #fff;
+  transition: .5s cubic-bezier(0, 1, 1, 1);
+  padding: 1px 0 1px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.competition_title:hover{
+  box-shadow: 0px 2px 6px 1px #ddd,0px -1px 4px 0px #f0f0f0;
+  background: #ccc;
+  /*color: #fff;*/
+}
+.competition_block{
+  opacity: 0;
+  z-index: 1;
+  background-color: #fff;
+  background-image:
+   radial-gradient(farthest-corner at 40% 90%,rgba(255,255,255,.2) 70%,rgba(210,210,210,.1)),
+   linear-gradient(to bottom,#fff 50%,#f5f5f5);
+  padding:20px 10px 12px 20px;
+  box-shadow: 0 -4px 2px 0px #eee, 0 4px 15px 0px #ccc;
+  margin: 10px;
+  border-width: 0 1px;
+  border-style: dashed;
+  border-color: #999;
+}
+.competition_block::after{
+  position: absolute;
+  content: attr(data-game);
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  color: #fff;
+  background-color: #404040;
+  padding: 2px 8px 2px 12px;
+  border-top-left-radius: 4px;
+}
+
+.list_li_6{
+  font-size: 20px;
+}
+.list_li_6::before{
+  position: absolute;
+  content: "";
+  border-width: 13px 2px;
+  border-style: solid;
+  border-color: #d8623d;
+  top: 0px;
+  left: -12px
+}
+.close_block{
+  font-size: 14px;
+  width: 100px;
+  background-color: #ff8c67;
+  background-image: linear-gradient(to bottom,#d8623d,#933517);
+  text-align: center;
+  padding: 4px 0;
+  margin: 10px auto -12px auto;
+  border-radius: 4px 4px 0 0;
+  color: #fff;
+  transition: .5s;
+  cursor: pointer;
+}
+.close_block:hover{box-shadow: 0 -1px 4px 1px #ccc;}

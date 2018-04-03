@@ -1,0 +1,187 @@
+﻿::selection{background: #000;color: #fff;}
+::-moz-selection{background: #000;color: #fff;}
+a{
+  text-decoration: none;
+  display: block;
+}
+body{
+  /*background-image: linear-gradient(to right,#ff8222,#ffd53b);*/
+  background-image: linear-gradient(to top,rgba(0,0,0,.85),rgba(25,25,25,.85));
+  font-family:monospace,"微軟正黑體";
+  font-weight: bold;
+}
+#content,body,html{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#bgbg{
+  width: 100%;
+  height: 100%;
+  /*background-image: url("../image/main/index_bg.png");*/
+  background-image: url("../image/main/index_picture.png");
+  /*transform:skew(5deg,3deg) scale(1.1,1.1);*/
+  opacity: .75;
+  position: fixed;
+  background-size: cover;
+  filter: blur(1px);
+  transition: .5s;
+}
+#text-block{
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: .5s;
+  text-align: center;
+}
+#text-span{
+  font-size: 40px;
+  line-height: 1.1em;
+  color: #fff;
+  margin-top: 20%;
+}
+#enter{
+  border: 4px solid #fff;
+  width: 200px;
+  font-size: 32px;
+  margin: 8% auto;
+  line-height: 1.5em;
+  transition: .25s;
+
+  /*background-color: rgba(255,255,255,.15) ;*/
+}
+#enter:hover{background-color: #fff;}
+#enter:hover a{color: #000;}
+#enter a{color: #fff;}
+#picture-block{
+  position: absolute;
+  transition: .5s;
+  transform-origin: 50% 100%;
+  right: -5%;
+  height: 100%;
+  width: 50%;
+  display: block;
+}
+.balloon-block{position: absolute;bottom: 8%;}
+.balloon-block,.balloon{
+  width: 420px;
+  height:800px;
+  transform-origin: 50% 100%;
+}
+.ball-opacity{transition: .5s;}
+.balloon{
+  z-index: 20;
+  animation: balloon-wind 20s cubic-bezier(1, 1, 1, 1);
+  animation-iteration-count: infinite;
+  /*opacity: .85;*/
+}
+.balloon:hover{animation-play-state: paused;}
+.balloon::before,.balloon::after{
+  position: absolute;
+  content: "";
+  border-style: solid;
+}
+.balloon::before{
+  border-color: transparent transparent #fff transparent;
+  border-width: 0 20px 40px 20px;
+  top: 405px;
+  left: 190px;
+  border-radius: 30%;
+  z-index: 19;
+}
+.balloon::after{
+  border-color: #fff;
+  border-width: 200px 3px;
+  top: 405px;
+  left: 208px;
+  /*border-radius: 40%;*/
+  z-index: 18;
+}
+.balloon-r-45{border-radius: 45%;}
+.balloon-r-50{border-radius: 50%;opacity: .8;}
+.balloon-head{
+  overflow: hidden;
+  border: 6px solid #fff;
+  transform-origin: 50% 100%;
+  position: relative;
+  z-index: 20;
+  width:400px;
+  height:400px;
+  animation: balloon-head-wind 15s cubic-bezier(1, 1, 1, 1);
+  animation-iteration-count: infinite;
+  background: #fff;
+}
+
+.balloon-head::after{
+  content: "";
+  position: absolute;
+  border-radius: 80% 20%;
+  border: 100px solid rgba(255,255,255,.3);
+  top: 5%;
+  left: 5%;
+}
+.bal-img{width: 400px;height: 400px;}
+
+
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  background: #fff;
+  text-align: center;
+  z-index: 200;
+  font-size: 20px;
+  line-height: 3em;
+  color: #333;
+  /*border-top: 2px solid #333;*/
+}
+@keyframes balloon-wind {
+    0%{transform: rotate(0);}
+    25%{transform: rotate(5deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(-5deg);}
+    100%{transform: rotate(0deg);}
+}
+@keyframes balloon-head-wind {
+    0%{transform: rotate(0);}
+    25%{transform: rotate(-3deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(3deg);}
+    100%{transform: rotate(0deg);}
+}
+@media all and (max-width: 1440px){
+  #picture-block{
+    bottom: 0;
+    transform-origin: bottom;
+    transform: scale(.75);
+  }
+}
+
+@media all and (max-height: 800px) {
+  #picture-block{transform: scale(.75);}
+
+}
+@media all and (max-width: 1000px) {
+  #text-block{width: 100%;}
+  #text-span,#enter{ margin-top: 10%;}
+  #text-block{top: 0;}
+  #picture-block{transform: scale(.4);width: 100%;}
+  /*.ball-opacity{opacity: 0;}*/
+  #bgbg{background-position: 50%; }
+}
+@media all and (max-width: 600px){
+  #picture-block{
+    transform: scale(0);
+    right: 0;
+  }
+  #text-block{height: 100%;}
+  footer{font-size: 16px;}
+}
+@media all and (max-height: 300px){
+  #picture-block{transform: scale(0.1);}
+}

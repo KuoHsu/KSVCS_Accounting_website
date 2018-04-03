@@ -1,0 +1,99 @@
+#web_block{
+  width: 1024px;
+  margin: 0 auto;
+}
+  body{
+    margin: 0;
+    background-image: url("../image/main/web_bg_a.png");
+    font-family:monospace,"微軟正黑體";
+  }
+  header{
+    font-size: 40px;
+    font-weight: bold;
+    color: #ddd;
+    height: 60px;
+    background: #111;
+    padding: 10px 40px;
+    border-radius: 0 0 6px 6px;
+    border-top: 2px dashed #ccc;
+    position: relative;
+    overflow: hidden;
+  }
+  footer{
+    margin:0 auto;
+    font-size: 14px;
+    color: #fff;
+    background-color: #111;
+    width: 500px;
+    height: 20px;
+    text-align: center;
+    border-radius: 0 0 4px 4px;
+  }
+  a{
+    text-decoration: none;
+    color: #ff9800;
+  }
+  #img_ksvcs{
+    position: absolute;
+    right: 0;
+    top: -25px;
+    width: 200px;
+    transform: rotateZ(-10deg);
+    opacity: .1;
+  }
+  #album_txt{
+    width: 660px;
+    padding: 4px 20px 10px 20px;
+    border-width: 0 1px;
+    border-style: dashed;
+    border-color: #ddd;
+    margin: 0px auto 20px auto;
+  }
+  #album_txt p{
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.4em;
+    margin: .4em 0 .1em 0;
+    text-align: justify;
+  }
+
+  #album{max-width: 800px; height: 508px; background: #fff;}
+  #content_block{
+    width: 900px;
+    margin: 0 auto;
+    padding:20px 0 40px 0;
+    background: #1e1e1e;
+    background-image: linear-gradient(to bottom,#1e1e1e,#111 70%);
+    border-radius: 0 0 6px 6px;
+    box-shadow: inset 0 2px 12px #111;
+  }
+  #gall_block{
+    margin: 0 auto;
+    width: 800px;
+    height: 508px;
+    border:  solid #ccc;
+    border-width:  2px;
+    border-radius: 2px;
+    position: relative;
+  }
+  #play_buttom{
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    background: #35ae3a;
+    bottom: -36px;
+    right: 4px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: .2s;
+    box-shadow: inset 0px 1px rgba(255,255,255,.7);
+  }
+  #play_buttom:hover{
+    color: #fff;
+  }
+  ::selection{
+    color: #333;
+    background: #ffbf00;
+  }
